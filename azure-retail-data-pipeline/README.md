@@ -40,7 +40,7 @@ Triggers: Schedule trigger (daily) + Storage Event trigger (on new file arrival)
 ### 1. Ingestion (Bronze)
 Raw CSV lands in a `bronze` container landing zone. An Azure Data Factory Copy Data activity organizes it into a date-partitioned path (`bronze/retail/YYYY/MM/DD/`), simulating how a real ingestion pipeline structures incoming vendor/source-system drops.
 
-![ADF Pipeline](screenshots/adf-pipeline.png)
+![ADF Pipeline](adf-pipeline/adf-pipeline.png)
 
 ### 2. Transformation — Bronze to Silver
 A PySpark notebook in Databricks reads the raw file and:
